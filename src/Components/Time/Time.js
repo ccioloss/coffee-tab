@@ -1,13 +1,19 @@
 import React from 'react'
-import Clock from "./Clock"
+import Clock from './Clock'
+import {useState} from 'react'
 
 const Time = () => {
-    const date = new Date()
-    let formattedDate = date.toLocaleString("en-GB",{
-        hour:'numeric',
-        minute: 'numeric',
-        second: 'numeric'
-    })
+    let time = new Date().toLocaleTimeString()
+    const [Ctime, setCtime] = useState(time); 
+    const updateTime = () => {
+        time = new Date().toLocaleTimeString()
+        setCtime(time)
+    }
+
+    setInterval(() => {
+        updateTime()
+    }, 1000)
+
     const text = "Good morning";
     const name = "Nick"
 
@@ -16,7 +22,7 @@ const Time = () => {
             <div className="time-sp-wish">
                 <p className="time-wish">{text} {name}</p>
             </div>
-            <Clock formattedDate={formattedDate}/>
+            <Clock formattedDate={Ctime}/>
         </div>
     )
 }
