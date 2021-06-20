@@ -15,8 +15,15 @@ const Time = () => {
     }, 1000)
 
     const text = "Good morning";
-    const name = "Nick"
+    let name = "";
 
+    if (localStorage.length !== 0) {
+        name = localStorage.getItem("name");
+    } else {
+        name = localStorage.setItem("name", prompt("Introdu numele:"));
+    }
+
+    console.log(localStorage.length)
     return (
         <div className="time">
             <div className="time-sp-wish">
