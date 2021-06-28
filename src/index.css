@@ -141,3 +141,41 @@ body{
 /* WEATHER */
 
 /* NEWS */
+
+.newsfeed-title {
+  margin: 15px;
+  color : rgb(179, 17, 17);
+}
+
+.news-component {
+  font-family: Arial, Helvetica, sans-serif;
+  padding : 15px;
+  margin : 10px;
+  width : 40%;
+  border: solid 2px black;
+}
+
+.news-title {
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.news-content {
+  margin-top: 5px;
+  color: black;
+  font-style: italic;
+  font-size: 18px;
+  display: block;
+}
+
+.news-pubdate {
+  color: lightgray;
+  font-size: 14px;
+  text-align: right;
+}
+
+.news-link {
+  display: block;
+  text-decoration: none;
+}
