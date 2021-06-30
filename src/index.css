@@ -143,10 +143,108 @@ body{
 .time-date{
   font-size:52px;
 }
-/* WEATHER */
-
+/* WEATHER  */
+.rotate{
+  position: relative;
+  top: 40%;
+  right: 10%;
+  -moz-transition: all 2s linear;
+  -webkit-transition: all 2s linear;
+  transition: all 2s linear;
+}
+.rotate.down{
+  -moz-transform:rotate(180deg);
+  -webkit-transform:rotate(180deg);
+  transform:rotate(180deg);
+}
+.weather-app {
+  width: 60%;
+  height: 200px;
+  top: 20px;
+  border-radius: 6px;
+  position: relative;
+}
+.weather-app .widget {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  height: 200px;
+  width: 1000px;
+  transform: translate(-50%, -50%);
+  flex-wrap: wrap;
+  border-radius: 20px;
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+}
+.weatherIcon .element {
+  position: relative;
+  left: 40%;
+  padding-right: 40px;
+  display: inline-block;
+  font-size: 20px;
+}
+.weatherIcon img {
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+.widget .weatherIcon {
+	 flex: 1 100%;
+	 border-top-left-radius: 20px;
+	 border-top-right-radius: 20px;
+	 background: #fafafa;
+	 display: flex;
+	 align-items: center;
+	 justify-content: space-around;
+}
+.widget .weatherIcon i {
+	 padding-top: 30px;
+}
+.widget .weatherInfo {
+	 flex: 0 0 70%;
+	 height: 40%;
+	 background: #080705;
+	 border-bottom-left-radius: 20px;
+	 display: flex;
+	 align-items: center;
+	 color: white;
+}
+.widget .weatherInfo .temperature {
+	 flex: 0 0 40%;
+	 width: 100%;
+	 font-size: 65px;
+	 display: flex;
+	 justify-content: space-around;
+}
+.widget .weatherInfo .description {
+	 flex: 0 60%;
+	 display: flex;
+	 flex-direction: column;
+	 width: 100%;
+	 height: 100%;
+	 justify-content: center;
+}
+.widget .weatherInfo .description .weatherCondition {
+	 text-transform: uppercase;
+	 font-size: 25px;
+	 font-weight: 100;
+}
+.widget .weatherInfo .description .place {
+	 font-size: 15px;
+}
+.widget .date {
+	 flex: 0 0 30%;
+	 height: 40%;
+	 background: #70c1b3;
+	 border-bottom-right-radius: 20px;
+	 display: flex;
+	 justify-content: space-around;
+	 align-items: center;
+	 color: white;
+	 font-size: 30px;
+	 font-weight: 800;
+}
 /* NEWS */
-
 .newsfeed-title {
   margin: 15px;
   color : rgb(179, 17, 17);
