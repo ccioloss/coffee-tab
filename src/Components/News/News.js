@@ -2,7 +2,12 @@ import React from 'react'
 
 const News = ({props}) => {
   let time = props.pubDate;
-  time = time.slice(0, time.length - 6);
+
+  if (time !== undefined) {
+    time = time.slice(0, time.length - 6);
+  } else {
+    time = "";
+  }
   return (
     <li class="news-component">
       <a class="news-link" href= { props.link } target="_blank" rel="noreferrer">
