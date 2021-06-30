@@ -287,3 +287,11 @@ body{
   display: block;
   text-decoration: none;
 }
+
+.feed-title {
+  display: flex;
+}
+
+.feed-select {
+  text-align: right;
+}
