@@ -43,7 +43,7 @@ const NewsList = () => {
         </select>
       </div>
 
-      <div class = "wrapper">
+      <div class = "wrapper" id="style">
         <ul>{newsList.map((news) => {return (<News props={news}/>)})}</ul>
       </div>
     </div>) : (<div><h1>Loading ... </h1></div>)}
