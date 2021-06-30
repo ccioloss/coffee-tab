@@ -1,6 +1,5 @@
 import Weather from './Components/Weather-App/Weather'
 import Time from './Components/Time/Time'
-import News from './Components/News/News'
 import Todo from './Components/To-do List/Todo'
 import NewsList from './Components/News/NewsList';
 

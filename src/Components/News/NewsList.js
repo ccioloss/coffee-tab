@@ -24,7 +24,7 @@ const NewsList = () => {
     {!loader && !!newsList.length ? 
     (<div>
       <h2 class="newsfeed-title">Trending News</h2>
-      <div class = "wrapper">
+      <div id = "style" class = "wrapper">
         <ul>{newsList.map((news) => {return (<News props={news}/>)})}</ul>
       </div>
     </div>) : (<div><h1>Loading ... </h1></div>)}
