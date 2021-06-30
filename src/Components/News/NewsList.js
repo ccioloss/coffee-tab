@@ -3,14 +3,15 @@ import News from "./News";
 let Parser = require('rss-parser');
 let parser = new Parser();
 
+const cors_proxy = 'https://thingproxy.freeboard.io/fetch/';
+const nytimes = 'https://rss.nytimes.com/services/xml/rss/nyt/World.xml';
 
 const NewsList = () => {
   const [loader, setLoader] = useState(true);
   const [newsList, setNewsList] = useState([]);
 
   useEffect(() => {
-    const cors_proxy = 'https://thingproxy.freeboard.io/fetch/';
-    const url = cors_proxy + 'https://rss.nytimes.com/services/xml/rss/nyt/World.xml';
+    const url = cors_proxy + nytimes;
     setLoader(true);
     parser.parseURL(url).then((feed) => {
       console.log(feed.items[0]);
