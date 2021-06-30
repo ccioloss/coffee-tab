@@ -4,13 +4,13 @@ const News = ({props}) => {
   let time = props.pubDate;
   time = time.slice(0, time.length - 6);
   return (
-    <div class="news-component">
+    <li class="news-component">
       <a class="news-link" href= { props.link }>
         <p class="news-title">{props.title}</p>
         <p class="news-content">{ props.contentSnippet }</p>
         <p class="news-pubdate">{ time }</p>
       </a>
-    </div>
+    </li>
 
   );
 }
