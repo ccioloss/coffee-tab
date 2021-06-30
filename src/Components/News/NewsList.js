@@ -20,8 +20,7 @@ const NewsList = () => {
 
 
   useEffect(() => {
-    const url = cors_proxy + news_feeds[feed];
-    console.log(feed);
+    const url = cors_proxy + news_feeds[feed];    
     setLoader(true);
     parser.parseURL(url).then((feed) => {
       const items = feed.items.splice(0, 20).map(({title, link, pubDate, contentSnippet}) => ({title, link, pubDate, contentSnippet}));
