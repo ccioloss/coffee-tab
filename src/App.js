@@ -2,6 +2,7 @@ import Weather from './Components/Weather-App/Weather'
 import Time from './Components/Time/Time'
 import Todo from './Components/To-do List/Todo'
 import NewsList from './Components/News/NewsList';
+import { useEffect } from 'react';
 
 
 function App() {
@@ -23,11 +24,14 @@ function App() {
 
   //Name generator
   let Name = "";
+  let City = "Amsterdam";
 
   if (localStorage.length !== 0) {
       Name = localStorage.getItem("name");
+      City = localStorage.getItem("city");
   } else {
-      Name = localStorage.setItem("name", prompt("Introdu numele:"));
+      Name = localStorage.setItem("name", prompt("What's your name?"));
+      City = localStorage.setItem("city", prompt("Where are you from?"))
   }
 
   //Addresses
@@ -45,9 +49,11 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Header">
-        <Weather />
+      <div className="Time">
         <Time text={Headings[i]}/>
+      </div>
+      <div className="Header">
+        <Weather props={City}/>
       </div>
       <div className="Content">
         {/* <NewsSwitcher /> */}

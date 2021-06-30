@@ -1,10 +1,10 @@
 import React from 'react'
 import Main from './Components/Main';
 
-const Weather = () => {
+const Weather = ({props}) => {
     return (
         <div className = "weather-app" >
-          <Main/>
+          <Main props={props}/>
         </div>
     )
 }
