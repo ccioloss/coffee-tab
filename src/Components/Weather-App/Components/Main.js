@@ -52,12 +52,14 @@ const Main = () => {
     return (
             <div class = "widget">
                 <div class = "weatherIcon">
-                    <IoSyncCircleOutline size = {30} id = "io" class = "rotate" onClick = {() =>  refresh()} />
                     <img id = "icon" src={url}></img>
                     <Details/>
+                    <IoSyncCircleOutline size = {30} id = "io" class = "rotate" onClick = {() =>  refresh()} /> 
                 </div>
-                <Info/>
-                <div id = "date" class = "date"></div>
+                <div class = "bottom">
+                    <Info/>
+                    <div id = "date" class = "date"></div>
+                </div>
             </div>
     )
 }

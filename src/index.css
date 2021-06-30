@@ -145,10 +145,23 @@ body{
   font-size:52px;
 }
 /* WEATHER  */
-.rotate{
+.icons {
+  left: 14%;
   position: relative;
-  top: 40%;
-  right: 10%;
+  width: 30%;
+}
+.bottom {
+  flex: 1 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.rotate{
+  position: absolute;
+  left: 1%;
+  top: 45%;
   -moz-transition: all 2s linear;
   -webkit-transition: all 2s linear;
   transition: all 2s linear;
@@ -167,26 +180,24 @@ body{
 }
 .weather-app .widget {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  left: 2%;
   display: flex;
   height: 200px;
-  width: 1000px;
-  transform: translate(-50%, -50%);
+  width: 100%;
   flex-wrap: wrap;
   border-radius: 20px;
   box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
 }
 .weatherIcon .element {
   position: relative;
-  left: 40%;
-  padding-right: 40px;
+  width: 33%;
   display: inline-block;
   font-size: 20px;
 }
 .weatherIcon img {
   width: 120px;
   height: 120px;
+  left: 20%;
   position: relative;
 }
 .widget .weatherIcon {
@@ -203,7 +214,7 @@ body{
 }
 .widget .weatherInfo {
 	 flex: 0 0 70%;
-	 height: 40%;
+	 height: 100%;
 	 background: #080705;
 	 border-bottom-left-radius: 20px;
 	 display: flex;
@@ -235,7 +246,7 @@ body{
 }
 .widget .date {
 	 flex: 0 0 30%;
-	 height: 40%;
+	 height: 100%;
 	 background: #70c1b3;
 	 border-bottom-right-radius: 20px;
 	 display: flex;
