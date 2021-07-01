@@ -37,6 +37,12 @@ body{
   margin-bottom: 20px;
 }
 
+.to-do-container .tasks {
+  max-height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .to-do-container .btn {
   display: inline-block;
   background: #000;
