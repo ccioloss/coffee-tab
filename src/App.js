@@ -2,13 +2,11 @@ import Weather from './Components/Weather-App/Weather'
 import Time from './Components/Time/Time'
 import Todo from './Components/To-do List/Todo'
 import NewsList from './Components/News/NewsList';
-import { useEffect, useState } from 'react';
-import { configure } from '@testing-library/react';
-
+import {useState} from 'react';
 
 function App() {
-  const [name, setName] = useState(null);
-  const [location, setLocation] = useState(null);
+  const [name, setName] = useState(localStorage.getItem("name"));
+  const [location, setLocation] = useState(localStorage.getItem("location"));
   //Part of the day generator
   const today = new Date();
   const gentime= today.getHours();
