@@ -7,7 +7,7 @@ body{
   background: url("./media/background.jpg") no-repeat center center fixed;
   background-size: cover;
   overflow: overlay;
-  padding: 2%;
+  margin: 2%;
 }
 /* TO-DO LIST */
 .to-do-container {
@@ -18,11 +18,12 @@ body{
 	border: 2px solid #6658d3;
 	padding: 32px;
 	font-family: 'Poppins', sans-serif;
-	background: rgba(255, 255, 255, 0.5);
+	background: #fff;
 	position: absolute;
 	width: 425px;
 	left: 75%;
 	top: 15%;
+	border-radius: 6px;
 }
 .to-do-container .header {
 	display: flex;
@@ -32,7 +33,7 @@ body{
 }
 
 .to-do-container .tasks {
-  max-height: 500px;
+  max-height: 400px;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -61,7 +62,8 @@ body{
 	width: 100%;
 }
 .to-do-container .task {
-	background: #f4f4f4;
+	color: white;
+	background: #6658d3;
 	margin: 5px;
 	padding: 10px 20px;
 	cursor: pointer;
@@ -108,7 +110,9 @@ body{
 }
 /* DATE&TIME */
 .time{
-	color:white;
+	color:black;
+	background-color: #fff;
+	border-radius: 6px;
 	font-family: Roboto, sans-serif;
 	width: 425px;
 	text-align: center;
@@ -120,10 +124,11 @@ body{
 	margin-bottom: 2px;
 }
 .time-sp-date{
-  color: #000;
+  color: #fff;
 	padding: 9px 0px;
-  background: rgba(255, 255, 255, 0.5);
-	border:4px solid #6658d3;
+  background: #6658d3;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
 }
 .time-date{
 	font-size:52px;
@@ -156,7 +161,7 @@ body{
 	transform:rotate(180deg);
 }
 .weather-app {
-	width: 60%;
+	width: 50%;
 	height: 200px;
 	top: 20px;
 	border-radius: 6px;
