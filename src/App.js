@@ -40,6 +40,7 @@ function App() {
     if (document.getElementById("location").value !== "" && document.getElementById("name").value !== ""){
       localStorage.setItem("name", document.getElementById("name").value)
       localStorage.setItem("location", document.getElementById("location").value)
+      localStorage.setItem("tasks", "[]");
       setName(localStorage.getItem("name"))
       setLocation(localStorage.getItem("location"))
     }
