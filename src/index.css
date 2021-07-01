@@ -11,6 +11,7 @@ body{
   background: url("./media/background.jpg") no-repeat center center fixed;
   background-size: cover;
   overflow: overlay;
+  padding: 2%;
 }
 
 /* TO-DO LIST */
