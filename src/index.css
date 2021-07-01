@@ -250,6 +250,7 @@ body{
 	width: 50%;
 	height: 600px;
 	overflow-y: auto;
+  border: 3px solid white;
 }
 .newsfeed-title {
 	margin: 15px;
