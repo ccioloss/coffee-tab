@@ -2,6 +2,7 @@ import Weather from './Components/Weather-App/Weather'
 import Time from './Components/Time/Time'
 import Todo from './Components/To-do List/Todo'
 import NewsList from './Components/News/NewsList';
+import Settings from './Components/Settings/Settings';
 import {useState} from 'react';
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
       `Greetings, ${name}!`,
       `Hi there, ${name}!`,
       `Good ${zone} ${name}!`,
-      `Hope you have a good time, ${name}!`,
+      `Hope you're having a good time, ${name}!`,
       `Great to hear from you, ${name}!`,
       `Thanks for getting back to me, ${name}!`
   ]
@@ -60,6 +61,7 @@ function App() {
           <NewsList />
           <Todo />
         </div>
+        <Settings/>
       </div>
     );
   }

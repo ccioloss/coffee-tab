@@ -42,12 +42,12 @@ const Todo = () => {
       }
     
     return (
-        <div className="to-do-container">
-            <Header onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
-            {showAddTask ? (<AddTask onAdd={addTask}/>) : ''}
-            {tasks.length>0 ? 
-                (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>)
-                 : ('No Tasks to Show')}
+      <div className="to-do-container">
+          <Header onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
+          {showAddTask ? (<AddTask onAdd={addTask}/>) : ''}
+          {tasks.length>0 ? 
+              (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>)
+              : ('No Tasks to Show')}
       </div>
     )
 }

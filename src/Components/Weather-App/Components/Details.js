@@ -13,9 +13,9 @@ const Details = () => {
                 <BiWind size = {40}/>
                 <p id = "wind"></p>
             </div>
-                <div class = "element">
-                    <BiCloudRain size = {40}/>
-                    <p id = "precip"></p>
+            <div class = "element">
+                <BiCloudRain size = {40}/>
+                 <p id = "precip"></p>
             </div>
         </div>
     )
