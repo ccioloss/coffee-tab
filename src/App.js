@@ -2,13 +2,15 @@ import Weather from './Components/Weather-App/Weather'
 import Time from './Components/Time/Time'
 import Todo from './Components/To-do List/Todo'
 import NewsList from './Components/News/NewsList';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 
 function App() {
+  // const [name, setName] = useState(localStorage.getItem("name"));
   //Part of the day generator
   const today = new Date();
   const gentime= today.getHours();
+  let name = "";
   let zone
 
   const period = () => {
@@ -22,28 +24,24 @@ function App() {
   }
   period()
 
-  //Name generator
-  let Name = "";
-  let City = "Amsterdam";
+    if (localStorage.length !== 0) {
 
-  if (localStorage.length !== 0) {
-      Name = localStorage.getItem("name");
-      City = localStorage.getItem("city");
-  } else {
-      Name = localStorage.setItem("name", prompt("What's your name?"));
-      City = localStorage.setItem("city", prompt("Where are you from?"))
-  }
+      name = localStorage.getItem("name");
+    } else {
+      name = localStorage.setItem("name", prompt("What's your name?"));
+    }
+
 
   //Addresses
   const Headings=[
-      `Hi ${Name}!`,
-      `Hello ${Name}!`,
-      `Greetings, ${Name}!`,
-      `Hi there, ${Name}!`,
-      `Good ${zone} ${Name}!`,
-      `Hope you have a good time, ${Name}!`,
-      `Great to hear from you, ${Name}!`,
-      `Thanks for getting back to me, ${Name}!`
+      `Hi ${name}!`,
+      `Hello ${name}!`,
+      `Greetings, ${name}!`,
+      `Hi there, ${name}!`,
+      `Good ${zone} ${name}!`,
+      `Hope you have a good time, ${name}!`,
+      `Great to hear from you, ${name}!`,
+      `Thanks for getting back to me, ${name}!`
   ]
   const i = Math.floor(Math.random() * Headings.length);
 
@@ -53,7 +51,7 @@ function App() {
         <Time text={Headings[i]}/>
       </div>
       <div className="Header">
-        <Weather props={City}/>
+        <Weather/>
       </div>
       <div className="Content">
         {/* <NewsSwitcher /> */}

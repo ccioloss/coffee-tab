@@ -4,14 +4,13 @@ import Info from './Info'
 import {IoSyncCircleOutline} from 'react-icons/io5'
 
 const Main = ({props}) => {
-    const [city, setCity] = useState("Amsterdam")
+    // const [city, setCity] = useState(localStorage.getItem("city"));
     const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
     ];
     const [url, setUrl] = useState("");
     
     useEffect ( () => {
-        console.log(props);
         getWeather();
     },[])
      
@@ -39,7 +38,6 @@ const Main = ({props}) => {
     }
 
     function getWeather(){
-        console.log(props);
         fetch('http://api.weatherapi.com/v1/current.json?key=4b38d677508f44e9b67100636212406&q=' + props)
         .then(response => response.json())
         .then(data => processData(data));
