@@ -4,8 +4,7 @@ let Parser = require('rss-parser');
 let parser = new Parser();
 
 const cors_proxy = 'https://thingproxy.freeboard.io/fetch/';
-const nytimes = 'https://rss.nytimes.com/services/xml/rss/nyt/World.xml';
-
+  
 const news_feeds = {
   "nytimes" : "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
   "bbc" : "http://feeds.bbci.co.uk/news/world/rss.xml",

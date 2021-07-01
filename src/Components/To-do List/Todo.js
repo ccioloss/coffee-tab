@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useState } from 'react'
 import Header from './Components/Header'
 import Tasks from './Components/Tasks'
 import AddTask from './Components/AddTask'
-import { isCompositeComponent } from 'react-dom/test-utils'
 
 const Todo = () => {
     const [showAddTask, setShowAddTask] = useState(false)
+    
     const [tasks, setTasks] = useState(
         JSON.parse(localStorage.getItem("tasks")
     ));

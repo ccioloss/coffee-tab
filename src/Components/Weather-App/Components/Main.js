@@ -4,7 +4,7 @@ import Info from './Info'
 import {IoSyncCircleOutline} from 'react-icons/io5'
 
 const Main = () => {
-    const [city, setCity] = useState(localStorage.getItem("location"));
+    const city = localStorage.getItem("location");
     const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
     ];
@@ -52,7 +52,7 @@ const Main = () => {
     return (
             <div class = "widget">
                 <div class = "weatherIcon">
-                    <img id = "icon" src={url}></img>
+                    <img id = "icon" src={url} alt = ""></img>
                     <Details/>
                     <IoSyncCircleOutline size = {30} id = "io" class = "rotate" onClick = {() =>  refresh()} /> 
                 </div>
