@@ -1,33 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import Header from './Components/Header'
 import Tasks from './Components/Tasks'
 import AddTask from './Components/AddTask'
+import { isCompositeComponent } from 'react-dom/test-utils'
 
 const Todo = () => {
     const [showAddTask, setShowAddTask] = useState(false)
-    const [tasks, setTasks] = useState([
-        {
-            id: 1,
-            text: 'Doctors Appointment',
-            day: 'Feb 5th at 2:30pm',
-            reminder: true,
-        },
-        {
-            id: 2,
-            text: 'Meeting at School',
-            day: 'Feb 6th at 1:30pm',
-            reminder: true,
-        },
-        {
-            id: 3,
-            text: 'Food Shopping',
-            day: 'Feb 5th at 2:30pm',
-            reminder: false,
-        }
-    ])
+    const [tasks, setTasks] = useState(
+        JSON.parse(localStorage.getItem("tasks")
+    ));
+    
     const deleteTask = (id) => {
+        localStorage.setItem("tasks", JSON.stringify(tasks.filter((task) => task.id !== id)));
         setTasks(tasks.filter((task) => task.id !== id))
+        console.log("here");
+
       }
     
       const toggleReminder = (id) => {
@@ -38,7 +26,11 @@ const Todo = () => {
       const addTask = (task) => {
         const id = Math.floor(Math.random()* 10000 )+1
         const newTask = {id, ...task}
+        console.log("aici:");
+        console.log([...tasks,newTask]);
         setTasks([...tasks,newTask])
+        localStorage.setItem("tasks", JSON.stringify([...tasks, newTask]));
+
       }
     
     return (
