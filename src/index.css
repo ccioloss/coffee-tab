@@ -248,9 +248,8 @@ body{
 /* NEWS */
 .wrapper {
 	width: 50%;
-	height: 670px;
+	height: 600px;
 	overflow-y: auto;
-  border: 3px solid #6658d3;
 }
 .newsfeed-title {
 	margin: 15px;
